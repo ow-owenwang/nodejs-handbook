@@ -1,0 +1,14 @@
+node_modules/
+dist-ssr/
+dist/
+coverage/
+*.local
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

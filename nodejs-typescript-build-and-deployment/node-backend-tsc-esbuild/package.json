@@ -1,0 +1,29 @@
+{
+  "name": "node-backend-tsc-esbuild",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express + TypeScript + MySQL with tsc and esbuild builds",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "build:tsc": "tsc",
+    "build:bundle": "npm run typecheck && node esbuild.config.cjs",
+    "start:tsc": "node dist/tsc/server.js",
+    "start:bundle": "node dist/bundle/server.cjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/node": "^22.20.5",
+    "esbuild": "^0.25.12",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
